@@ -1,0 +1,81 @@
+.tabelaItens{
+    display: flex;
+    justify-content: center;
+    border-collapse: collapse;
+    width: 100%;
+    margin: 0 auto;
+    font-size: 16px;
+    font-weight:unset;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+.tabelaItens th{
+    background-color:#15C7FF; 
+    border-collapse: collapse; 
+    color: white; 
+    text-align: center;
+    width: 5.7rem;
+}
+.tabelaItens tr, .tabelaItens td{
+    border: 1px solid #f3f2f2;
+    border-collapse: collapse;
+    padding-left: 10px;
+    text-align: center;
+}
+
+.linhaTotal{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding-right: 12px;
+   }
+
+.linhaTotal span{
+    font-size: 18px;
+}
+
+#total{
+    background-color: rgb(251, 255, 243);
+    text-align: center;
+}
+
+.BtnRemover {
+    height: 1.3rem;
+    width: 4.5rem;
+    background-color: #f57f7f;
+    border-color: #f57f7f;
+    border-radius: 5px;
+}
+
+.BtnRemover:hover {
+    cursor: pointer;
+    font-weight: bold;
+    background-color: #f53c3c;
+}
+
+.botaoGravar {
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+.btnGravarItens {
+    height: 2rem;
+    width: 7rem;
+    background-color: #00c3ff;
+    border: none;
+    color: white;
+    font-weight: bolder;
+    font-size: medium;
+    border-radius: 15px;
+}
+
+.btnGravarItens:hover {
+    cursor: pointer;
+    background-color: rgb(107, 221, 255);
+    height: 2.25rem;
+    width: 7.5rem;
+    transition: 500ms;
+}
