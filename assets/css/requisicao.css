@@ -20,9 +20,9 @@
 .header{
     width: 40.1vw;
     height: 5vh;
-    background-color: #15C7FF;  
+    background-color: #11a89c;  
     border: 1px;
-    border-color: #15C7FF; 
+    border-color: #11a89c; 
     display: flex;
     align-items: center;
     justify-content: center;
@@ -33,6 +33,7 @@
 }
 .header span{
     color: #ffffff;
+    font-weight: bolder;
 }
 
 .conteudo{
@@ -43,7 +44,7 @@
     padding-left: 1vw;
     padding-right: 1vw;
     border: thin;
-    border-color: #15C7FF;
+    border-color: #11a89c;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
     border-style: solid;
@@ -55,7 +56,7 @@
     flex-direction: column;
     margin-bottom: 3vh;
     flex-wrap: wrap;
-    align-items: center;
+    width: 100%;
 }
 
 .linhasCampos{

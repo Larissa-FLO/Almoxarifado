@@ -10,12 +10,13 @@
     margin-bottom: 10px;
 }
 .tabelaItens th{
-    background-color:#15C7FF; 
+    background-color:#11a89c; 
     border-collapse: collapse; 
     color: white; 
     text-align: center;
     width: 5.7rem;
 }
+
 .tabelaItens tr, .tabelaItens td{
     border: 1px solid #f3f2f2;
     border-collapse: collapse;
@@ -64,7 +65,7 @@
 .btnGravarItens {
     height: 2rem;
     width: 7rem;
-    background-color: #00c3ff;
+    background-color: #0b796f;
     border: none;
     color: white;
     font-weight: bolder;
@@ -74,7 +75,7 @@
 
 .btnGravarItens:hover {
     cursor: pointer;
-    background-color: rgb(107, 221, 255);
+    background-color: #11a89c;
     height: 2.25rem;
     width: 7.5rem;
     transition: 500ms;

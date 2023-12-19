@@ -29,7 +29,7 @@ input, select{
     width: 80px;
 }
 #departamento{
-    width: 520px;
+    width: 480px;
 }
 #dataRequisicao{
     width: 120px;
@@ -38,7 +38,7 @@ input, select{
     width: 80px;
 }
 #NomeFuncionario{
-    width: 520px;
+    width: 480px;
 }
 #cargo{
     width: 120px;
@@ -94,21 +94,21 @@ input, select{
 }
 
 .img {
-    height: 25px;
-    width: 25px;
+    height: 20px;
+    width: 20px;
     margin-right: 5px;
 }
 
 .nivelEstoque {
     display: flex;
     position: absolute;
-    top: 24.5rem;
-    left: 72.5rem;
+    top: 27.5rem;
+    left: 70.5rem;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    height: 9rem;
-    width: 17.5rem;
+    height: 5rem;
+    width: 17rem;
     border: none;
     background-color: rgb(255, 255, 214);
     opacity: 0;
@@ -118,12 +118,13 @@ input, select{
 .linhaEstoque {
     display: flex;
     align-items: center;
-    margin-left: 10px;
+    margin-left: 5px;
+    margin-top: 7px;
 }
 
 
 .BtnInserirItens{
-    background-color:#0095C5 ;
+    background-color:#268a81 ;
     width: 100px;
     height: 30px;
     border-radius: 20px;
@@ -131,8 +132,9 @@ input, select{
     justify-content: center;
     align-items: center ;
     cursor: pointer;
-
+    margin-left: 10px;
 }
+
 .BtnInserirItens span{
     color: #ffffff;
     font-size: 14px;
