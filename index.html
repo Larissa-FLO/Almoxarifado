@@ -11,7 +11,7 @@
 <body>
     <div class="menu"></div>
 
-    <div class="main">
+    <div class="form-group row">
         <div class="header">
             <span>Novo Pedido de Requisição</span>
         </div>
@@ -22,36 +22,36 @@
                     <input type="number" id="inpNumero">
                 </div>
                 <div class="camposPrincipais">
-                    <div class="camposPrincipaisLinha1 linhasCampos">
-                        <div class="grupo1 grupoInput">
+                    <div class="form-group row linhasCampos">
+                        <div class="col-md-1 grupoInput">
                             <span>ID.</span>
-                            <input type="number" id="idDepartamento" data-obrigatorios="true">
+                            <input type="number" data-isnumber='true' min="0" id="idDepartamento" data-obrigatorios="true">
                         </div>
-                        <div class="grupo2 grupoInput">
+                        <div class="col-md-8 grupoInput">
                             <span>Departamento</span>
-                            <input type="text" id="departamento"  data-obrigatorios="true">
+                            <input type="text" id="departamento"  data-obrigatorios="true" readonly>
                         </div>
-                        <div class="grupo3 grupoInput">
+                        <div class="col-md-3 grupoInput">
                             <span>Data</span>
                             <input type="date" id="dataRequisicao"  data-obrigatorios="true">
                         </div>
                     </div>
-                    <div class="camposPrincipaisLinha2 linhasCampos">
-                        <div class="grupo4 grupoInput">
+                    <div class="form-group row linhasCampos">
+                        <div class="col-md-1 grupoInput">
                             <span>ID Func.</span>
-                            <input type="number" id="idFuncionario"  data-obrigatorios="true">
+                            <input type="number" data-isnumber='true' id="idFuncionario"  data-obrigatorios="true">
                         </div>
-                        <div class="grupo5 grupoInput">
+                        <div class="col-md-8 grupoInput">
                             <span>Nome Funcionário</span>
-                            <input type="text" id="NomeFuncionario"  data-obrigatorios="true">
+                            <input type="text" id="NomeFuncionario"  data-obrigatorios="false" readonly>
                         </div>
-                        <div class="grupo6 grupoInput">
+                        <div class="col-md-3 grupoInput">
                             <span>Cargo</span>
-                            <input type="text" id="cargo"  data-obrigatorios="true">
+                            <input type="text" id="cargo"  data-obrigatorios="true" readonly>
                         </div>
                     </div>
-                    <div class="camposPrincipaisLinha3 linhasCampos">
-                        <div class="grupo7 grupoInput">
+                    <div class="form-group row linhasCampos">
+                        <div class="col-md-4 grupoInput">
                             <span>Categoria Motivo</span>  
                             <div class="grupoCategoria">                                                         
                                 <select id="categoriaMotivo"  data-obrigatorios="true"></select>
@@ -59,7 +59,7 @@
                             </div>
                         </div>
 
-                        <div class="grupo8 grupoInput">
+                        <div class="col-md-4 grupoInput">
                             <span>Motivo</span> 
                             <div class="grupoMotivo"> 
                                 <select id="Motivo"  data-obrigatorios="true"></select>
@@ -67,9 +67,9 @@
                             </div>                       
                         </div>
 
-                        <div class="grupo9 grupoInput">
+                        <div class="col-md-4 grupoInput">
                             <span>Nível de Prioridade</span>
-                            <div class="radioPrioridade" id="radioPrioridade">
+                            <div class="radioPrioridade" id="radioPrioridade" data-obrigatorios="true">
                                 <div class="grupoPrioridade">
                                     <input class="chkPrioridade" type="radio" name="prioridade" id="urgente">
                                     <span>Urgente</span>                                    
@@ -98,15 +98,15 @@
                         
                             <div class="grupoProduto">
                                 <span>Cod. Produto</span>
-                                <input type="text" id="CodigoProduto">
+                                <input type="number" id="CodigoProduto">
                             </div>
                             <div class="grupoProdutoDescricao">
                                 <span>Descrição</span>
-                                <input type="text" id="DescricaoProduto">
+                                <input type="text" id="DescricaoProduto" readonly>
                             </div>
                             <div class="grupoEstoque">
                                 <span>Quantidade</span>
-                                <input type="text" id="Estoque">
+                                <input type="number" id="Estoque">
                             </div>
                         
                         
@@ -160,8 +160,6 @@
                 </div>
 
                
-
-
                 <div class="botaoGravar">
                     <button type="submit" class="btnGravarItens" id="btnGravar">
                         <span>Gravar</span>
@@ -171,6 +169,9 @@
             </div>
     
         </div>
+           
+    </div>
+
     </div>
 
 <script src="./assets/scripts/dados.js"></script> 

@@ -29,7 +29,7 @@ input, select{
     width: 80px;
 }
 #departamento{
-    width: 480px;
+    width: 300px;
 }
 #dataRequisicao{
     width: 120px;
@@ -38,23 +38,16 @@ input, select{
     width: 80px;
 }
 #NomeFuncionario{
-    width: 480px;
+    width: 300px;
 }
 #cargo{
     width: 120px;
 }
 #categoriaMotivo{
-    width: 207px;
+    width: 120px;
 }
 #Motivo{
-    width: 207px;
-}
-.grupo9{
-    width: 250px;
-}
-
-.camposItens{
-    border: 0;
+    width: 120px;
 }
 
 .camposItens span{

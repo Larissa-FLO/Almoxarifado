@@ -6,8 +6,16 @@
 //    inputDepartamento.style.backgroundColor="white"
 //});
 
+document.querySelectorAll("input[data-isnumber='true']").forEach((input) => {
+    input.addEventListener("keypress", (event) => {
+      if (isNaN(event.key) || event.key < 0) {
+        event.preventDefault();
+      }
+    });
+  });
+
 function adicionarCorAoFocarInput(){
-    const listInput = document.querySelectorAll("input[type=text]");
+    // const listInput = document.querySelectorAll("input[type=text]");
     const inputsNumber = document.querySelectorAll("input[type=number]");
     const inputDate = document.querySelectorAll("input[type=date]");
     // console.log(listInput.length);
@@ -17,16 +25,16 @@ function adicionarCorAoFocarInput(){
     //     listInput[i].style.backgroundColor="#c5e3cd"
     // }
 
-    listInput.forEach(function(campo){
-        campo.addEventListener('focus', function(){
-            campo.style.backgroundColor="#c5e3cd"
-        });
+    // listInput.forEach(function(campo){
+    //     campo.addEventListener('focus', function(){
+    //         campo.style.backgroundColor="#c5e3cd"
+    //     });
 
-        campo.addEventListener('blur', function(){
-            campo.style.backgroundColor="white"
-        });
+    //     campo.addEventListener('blur', function(){
+    //         campo.style.backgroundColor="white"
+    //     });
 
-    })
+    // })
 
     inputsNumber.forEach(function(campo){
         campo.addEventListener('focus', function(){
@@ -36,7 +44,7 @@ function adicionarCorAoFocarInput(){
         campo.addEventListener('blur', function(){
             campo.style.backgroundColor="white"
         });
-
+    
     inputDate.forEach(function(campo){
         campo.addEventListener('focus', function(){
             campo.style.backgroundColor="#c5e3cd"
@@ -93,8 +101,8 @@ function carregarMotivos(){
     selectMotivo.add(optFirst);
 
     const valorCategoria = document.getElementById('categoriaMotivo').value;
-    console.log("Categoria selecionada: "+valorCategoria)
-    const motivosFiltrados = motivos.filter((m) => m.idCategoria==valorCategoria)
+    console.log("Categoria selecionada: "+ valorCategoria)
+    const motivosFiltrados = motivos.filter((m) => m.idCategoria == valorCategoria)
 
     motivosFiltrados.forEach(function(motivo){
         const opt = document.createElement('option');
@@ -125,32 +133,51 @@ document.getElementById('CodigoProduto').addEventListener("keyup", function(){
     }
 })
 
-document.getElementById('idDepartamento').addEventListener("keyup", function(){
+document.getElementById('idDepartamento').addEventListener("blur", function(){
     const departamentoPesquisado = document.getElementById('idDepartamento').value;
-    let departamentoFiltrado = departamentos.filter((p) => p.idDep==departamentoPesquisado);
 
-    if (departamentoFiltrado.length>0) {
-        document.getElementById('departamento').value=departamentoFiltrado[0].Descricao;
-    } else{
+    if (isNaN(departamentoPesquisado)) {
+        alert ("Digite apenas números");
+    } else if (departamentoPesquisado <= 0 && departamentoPesquisado.length>0){
+        alert ("Digite um número válido");
+        document.getElementById('idDepartamento').value = "";
         document.getElementById('departamento').value="";
-    }
+    } else {
 
+            let departamentoFiltrado = departamentos.filter((p) => p.idDep==departamentoPesquisado);
+
+        if (departamentoFiltrado.length>0) {
+            document.getElementById('departamento').value=departamentoFiltrado[0].Descricao;
+        } else{
+            document.getElementById('departamento').value="Departamento inexistente";
+        }
+    }
 })
 
-document.getElementById('idFuncionario').addEventListener("keyup", function(){
+document.getElementById('idFuncionario').addEventListener("blur", function(){
     const funcionarioPesquisado = document.getElementById('idFuncionario').value;
     let funcionariosFiltrados = funcionarios.filter((p) => p.idFunc==funcionarioPesquisado);
 
-    if (funcionariosFiltrados.length>0) {
-        document.getElementById('NomeFuncionario').value=funcionariosFiltrados[0].nomeFunc;
-    } else {
+    if (isNaN(funcionarioPesquisado)) {
+        alert ("Digite apenas números");
+    } else if (funcionarioPesquisado <= 0 && funcionarioPesquisado.length>0){
+        alert ("Digite um número válido");
+        document.getElementById('idFuncionario').value = "";
         document.getElementById('NomeFuncionario').value="";
-    }
-
-    if (funcionariosFiltrados.length>0){
-        document.getElementById('cargo').value=funcionariosFiltrados[0].cargoFunc;
-    } else {
         document.getElementById('cargo').value="";
+    } else {
+
+        if (funcionariosFiltrados.length>0) {
+            document.getElementById('NomeFuncionario').value=funcionariosFiltrados[0].nomeFunc;
+        } else {
+            document.getElementById('NomeFuncionario').value="Funcionário inexistente";
+        }
+
+        if (funcionariosFiltrados.length>0){
+            document.getElementById('cargo').value=funcionariosFiltrados[0].cargoFunc;
+        } else {
+            document.getElementById('cargo').value="";
+        }
     }
 })
 
