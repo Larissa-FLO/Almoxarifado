@@ -62,7 +62,7 @@
                         <div class="col-md-4 grupoInput">
                             <span>Motivo</span> 
                             <div class="grupoMotivo"> 
-                                <select id="Motivo"  data-obrigatorios="true"></select>
+                                <select id="Motivo"  data-obrigatorios="true" disabled style="background-color: rgb(161, 158, 158);"></select>
                                 <img class="btnAdd" src="./assets/img/add.svg" alt="">
                             </div>                       
                         </div>
@@ -88,6 +88,7 @@
                     </div>                    
                 </div>
             </div>
+            <br>
 
             <div class="itensRequisicao">
                 <div class="titulo2">
@@ -106,9 +107,8 @@
                             </div>
                             <div class="grupoEstoque">
                                 <span>Quantidade</span>
-                                <input type="number" id="Estoque">
+                                <input type="number" data-isnumber="true" id="Estoque">
                             </div>
-                        
                         
                             <div class="grupoStatusEstoque"> 
                                 <div>

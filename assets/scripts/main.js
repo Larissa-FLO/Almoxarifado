@@ -113,8 +113,23 @@ function carregarMotivos(){
 } 
 
 document.getElementById('categoriaMotivo').addEventListener('change', function(){
-    carregarMotivos();
-})
+    
+        carregarMotivos();
+
+    const selectMotivo = document.getElementById('Motivo');
+    const selectCategoria = document.getElementById('categoriaMotivo');
+    const valorCategoria = selectCategoria.value;
+    
+    if (valorCategoria !== '') {
+        selectMotivo.disabled = false;
+        selectMotivo.style.backgroundColor="white";
+    } else {
+        selectMotivo.disabled = true;
+        selectMotivo.value = '';
+    }
+    
+});
+
 
 document.getElementById('CodigoProduto').addEventListener("keyup", function(){
     const codigoPesquisado = document.getElementById('CodigoProduto').value;
@@ -154,13 +169,25 @@ document.getElementById('idDepartamento').addEventListener("blur", function(){
     }
 })
 
+document.getElementById('Estoque').addEventListener("blur", function() {
+    const quantidadeProduto = document.getElementById('Estoque').value;
+
+    if (quantidadeProduto <= 0 || quantidadeProduto === ''){
+        alert ("Digite um número válido");
+        document.getElementById('Estoque').value = "";
+        return false
+    } else {
+
+    }
+})
+
 document.getElementById('idFuncionario').addEventListener("blur", function(){
     const funcionarioPesquisado = document.getElementById('idFuncionario').value;
     let funcionariosFiltrados = funcionarios.filter((p) => p.idFunc==funcionarioPesquisado);
 
     if (isNaN(funcionarioPesquisado)) {
         alert ("Digite apenas números");
-    } else if (funcionarioPesquisado <= 0 && funcionarioPesquisado.length>0){
+    } else if (funcionarioPesquisado <= 0 && funcionarioPesquisado.length>=0){
         alert ("Digite um número válido");
         document.getElementById('idFuncionario').value = "";
         document.getElementById('NomeFuncionario').value="";
@@ -239,6 +266,9 @@ document.getElementById('btnInserirItens').addEventListener('click', function(){
     const campoDescricaoProduto = document.getElementById('DescricaoProduto');
     const campoQuantidade = document.getElementById('Estoque');
     
+    if (campoQuantidade.value === '') {
+        alert("Insira a quantidade do produto")
+    } else {
 
     const linha = document.createElement('tr');
 
@@ -274,6 +304,9 @@ document.getElementById('btnInserirItens').addEventListener('click', function(){
     tdBtnRemover.appendChild(criarBtnRemover(tabelaItens, linha, tdTotalLinha));
         linha.appendChild(tdBtnRemover);
         tabelaItens.appendChild(linha);
+
+    }
+
 })
 
 function criarBtnRemover(tabela, objLinha, numeroLinha){
