@@ -93,10 +93,13 @@ input, select{
 }
 
 .nivelEstoque {
-    position: fixed;
-    top: 29rem;
-    left: 60.5rem;
+    display: flex;
+    flex-direction: column;
+    margin-left: 25rem;
+    width: 15rem;
+    height: 5rem;
     background-color: rgb(255, 255, 214);
+    font-size: small;
     opacity: 0;
     transition-duration: 700ms;
 }
