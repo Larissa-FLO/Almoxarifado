@@ -35,7 +35,7 @@ const produtos = [
     {
         "idproduto": 1,
         "Descricao": "Impressora",
-        "estoque": 35,
+        "estoque": 5,
         "estoqueMinimo": 10,
         "unidade": "Un",
         "preco": 350,
@@ -43,7 +43,7 @@ const produtos = [
     {
         "idproduto": 2,
         "Descricao": "Grampeador",
-        "estoque": 75,
+        "estoque": 11,
         "estoqueMinimo": 10,
         "unidade": "Un",
         "preco": 7,
@@ -63,6 +63,14 @@ const produtos = [
         "estoqueMinimo": 10,
         "unidade": "Un",
         "preco": 480,
+    },
+    {
+        "idproduto": 5,
+        "Descricao": "Canetas",
+        "estoque": 70,
+        "estoqueMinimo": 50,
+        "unidade": "Un",
+        "preco": 5,
     },
 ]
 

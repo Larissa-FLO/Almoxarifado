@@ -20,7 +20,7 @@ body{
 
 }
 .header{
-    min-width: 39.2rem;
+    min-width: 43.2rem;
     height: 5vh;
     background-color: #11a89c;  
     border: 1px;
@@ -42,7 +42,7 @@ body{
     min-width: 39rem;
     padding-top: 3vh;
     padding-bottom: 3vh;
-    width: 39rem;
+    width: 43rem;
     padding-left: 1vw;
     padding-right: 1vw;
     border: thin;
@@ -160,11 +160,13 @@ body{
     width: 30px;
     height: 30px;
 }
-.grupoBtnInserirItens{
+.BtnInserirItens{
     display: flex;
     justify-content: center;
     align-items: center;  
-    margin-left: 5px; 
+    border: none;
+    color: white;
+    font-weight: bolder;
 }
 
 .grupoBtnGravar{

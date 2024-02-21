@@ -106,15 +106,18 @@
                                 <input type="text" id="DescricaoProduto" readonly>
                             </div>
                             <div class="grupoEstoque">
+                                <span>Estoque</span>
+                                <input type="number" data-isnumber="true" id="Estoque" readonly>
+                            </div>
+                            <div class="grupoEstoque">
                                 <span>Quantidade</span>
-                                <input type="number" data-isnumber="true" id="Estoque">
+                                <input type="number" data-isnumber="true" id="Quantidade">
                             </div>
                         
                             <div class="grupoStatusEstoque"> 
-                                <div>
-                                    <img src="/assets/img/verde.svg" alt="" id="imgEstoque">
+                                <div id="imgEstoque">
+                                    
                                 </div>                           
-                          
                             </div>
 
                             <div class="nivelEstoque" id="divEstoque">
@@ -133,9 +136,9 @@
                             </div>
 
                             <div class="grupoBtnInserirItens">
-                                <div class="BtnInserirItens" id="btnInserirItens">  
-                                    <span>Adicionar</span>
-                                </div>
+                                <button class="BtnInserirItens" id="btnInserirItens" disabled style="background-color: rgb(161, 158, 158);">  
+                                    Adicionar
+                                </button>
                             </div>
                     </div>
 
