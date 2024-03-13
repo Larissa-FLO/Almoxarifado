@@ -29,6 +29,11 @@ const motivos = [
         "Descricao": "Financeiro",
         "idCategoria": 2,
     },
+    {
+        "idMotivo": 4,
+        "Descricao": "Marketing",
+        "idCategoria": 3,
+    },
 ]
 
 const produtos = [

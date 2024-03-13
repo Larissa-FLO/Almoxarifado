@@ -10,7 +10,7 @@
     margin-bottom: 10px;
 }
 .tabelaItens th{
-    background-color:#11a89c; 
+    background-color:#7ec2e9; 
     border-collapse: collapse; 
     color: white; 
     text-align: center;
@@ -65,7 +65,7 @@
 .btnGravarItens {
     height: 2rem;
     width: 7rem;
-    background-color: #0b796f;
+    background-color: #7ec2e9;
     border: none;
     color: white;
     font-weight: bolder;
@@ -75,8 +75,18 @@
 
 .btnGravarItens:hover {
     cursor: pointer;
-    background-color: #11a89c;
+    background-color: #7ec2e9;
     height: 2.25rem;
     width: 7.5rem;
     transition: 500ms;
+}
+
+input[type=number]::-webkit-inner-spin-button { 
+    -webkit-appearance: none;
+    
+}
+input[type=number] { 
+   -moz-appearance: textfield;
+   appearance: textfield;
+
 }
